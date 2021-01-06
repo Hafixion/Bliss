@@ -7,10 +7,10 @@ import net.minecraft.server.v1_16_R2.NetworkManager;
 import net.minecraft.server.v1_16_R2.Packet;
 import net.minecraft.server.v1_16_R2.PlayerConnection;
 
-public class CraftConnection extends PlayerConnection {
+public class BlissConnection extends PlayerConnection {
 
     // default constructor
-    public CraftConnection(MinecraftServer minecraftserver, NetworkManager networkmanager, EntityPlayer entityplayer) {
+    public BlissConnection(MinecraftServer minecraftserver, NetworkManager networkmanager, EntityPlayer entityplayer) {
         super(minecraftserver, networkmanager, entityplayer);
     }
 
@@ -21,6 +21,6 @@ public class CraftConnection extends PlayerConnection {
 
     // Easy way to swap a connection
     public static void swapConnection(EntityPlayer player) {
-        player.playerConnection = new CraftConnection(player.server, new NetworkManager(EnumProtocolDirection.SERVERBOUND), player);
+        player.playerConnection = new BlissConnection(player.server, new NetworkManager(EnumProtocolDirection.SERVERBOUND), player);
     }
 }
