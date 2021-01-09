@@ -2,3 +2,5 @@ name: Bliss
 main: com.github.realms.Bliss
 version: 0.1b
 api-version: 1.16
+depend:
+  - LibsDisguises
